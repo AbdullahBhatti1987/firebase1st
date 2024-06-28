@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase 1st Signup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="left animationltr">
+            <h1>Welcome to Our App</h1>
+            <p>Experience the best service with our app. Sign up now to get started.</p>
+        </div>
+
+        <div class="right animationttb">
+            <div class="signup flex-column animationttb" id="signup">
+                <span class="topButton" id="showSignin">Login</span>
+                <h2 class="p2">Signup</h2>
+                <input type="email" id="signup_email" placeholder="Email" required>
+                <input type="password" id="signup_password" placeholder="Password" required>
+                <button type="submit" id="signupAccount">Signup</button>
+            </div>
+            <div class="signin flex-column animationttb" id="signin" style="display: none;">
+                <span class="topButton" id="showSignup">Signup</span>
+                <h2 class="p2">Login</h2>
+                <input type="email" id="signin_email" placeholder="Email" required>
+                <input type="password" id="signin_password" placeholder="Password" required>
+                <button type="submit" id="signinAccount">Login</button>
+            </div>
+        </div>
+    </div>
+    <div class="welcomeScreen" id="welcome">
+        <div class="content">
+            <h1>Welcome to <span id="getEmail"></span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id quos delectus, expedita quod minus
+                perspiciatis distinctio vitae explicabo sapiente, est rerum corporis vero tempora voluptate debitis
+                labore aspernatur! Ratione, neque!</p>
+            <button class="logoutButton" id="logout">Logout</button>
+        </div>
+        <div class="image">
+            <img src="./images/1.jpg" alt="Children playing in the park">
+        </div>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="./app.js" type="module"></script>
+</body>
+
+</html>
