@@ -32,10 +32,10 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     console.log("on Auth ==> User is logged in");
     const uid = user.uid;
+    console.log('User pehlse se logged in hai')
     document.getElementById("welcome").style.display = "flex";
     document.getElementById("container").style.display = "none";
-    console.log(user.email)
-    document.getElementById('getEmail').innerText = user.email;
+
   } else {
     console.log("on Auth ==> User is not logged in");
   }
@@ -49,8 +49,7 @@ function createUserAccount() {
       const user = userCredential.user;
       console.log("User successfully signup.");
       document.getElementById("signup").style.display = "none";
-      document.getElementById("signin").className =
-        "d-flex flex-column animationttb";
+      document.getElementById("signin").className = "d-flex flex-column animationttb";
     })
     .catch((error) => {
         signinPassword.value = "";
@@ -70,7 +69,11 @@ function loginUserAccount() {
   signInWithEmailAndPassword(auth, signinEmail.value, signinPassword.value)
     .then((userCredential) => {
       const user = userCredential.user;
-      signinPassword.value = "";
+      console.log('User successfully logged in')
+      document.getElementById("welcome").style.display = "flex";
+      document.getElementById("container").style.display = "none";
+      document.getElementById('getEmail').innerText = user.email;
+
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -92,7 +95,7 @@ function logoutFunction() {
       document.getElementById("welcome").style.display = "none";
       document.getElementById("container").style.display = "flex";
       document.getElementById("signup").style.display = "block";
-      document.getElementById("sign").style.display = "block";
+      document.getElementById("signin").style.display = "none";
       signinPassword.value = "";
     })
     .catch((error) => {
