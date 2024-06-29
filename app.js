@@ -93,7 +93,7 @@ function logoutFunction() {
       document.getElementById("welcome").style.display = "none";
       document.getElementById("container").style.display = "flex";
       document.getElementById("signup").style.display = "block";
-      document.getElementById("signin").style.display = "none";
+      document.getElementById("signin").className = 'signin d-none animationttb';
     })
     .catch((error) => {
       // An error happened.
