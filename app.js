@@ -30,14 +30,13 @@ const signupAccount = document.getElementById("signupAccount");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    console.log("on Auth ==> User is logged in");
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/auth.user
     const uid = user.uid;
-    console.log('User pehlse se logged in hai')
-    document.getElementById("welcome").style.display = "flex";
-    document.getElementById("container").style.display = "none";
-
+    // ...
   } else {
-    console.log("on Auth ==> User is not logged in");
+    // User is signed out
+    // ...
   }
 });
 
@@ -73,7 +72,6 @@ function loginUserAccount() {
       document.getElementById("welcome").style.display = "flex";
       document.getElementById("container").style.display = "none";
       document.getElementById('getEmail').innerText = user.email;
-
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -96,7 +94,6 @@ function logoutFunction() {
       document.getElementById("container").style.display = "flex";
       document.getElementById("signup").style.display = "block";
       document.getElementById("signin").style.display = "none";
-      signinPassword.value = "";
     })
     .catch((error) => {
       // An error happened.

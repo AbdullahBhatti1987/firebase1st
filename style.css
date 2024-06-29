@@ -83,9 +83,7 @@ button {
     color: #fff;
     width: 100%;
 }
-.animationttb{
-    animation: toptoBottom 0.5s ease-in-out forwards;
-}
+
 .welcomeScreen {
     display: none;
     width: 90%;
@@ -150,6 +148,9 @@ button {
 }
 
 
+.animationttb{
+    animation: toptoBottom 0.5s ease-in-out forwards;
+}
 @keyframes toptoBottom {
     0% {
         transform: translateY(-150%);
@@ -176,14 +177,13 @@ button {
 
 @media screen and (max-width: 678px) {
     body{
-        min-width: 320px;
+        max-width: 678px;
     }
     .container {
         flex-direction: column;
         width: 90%;
         height: 90%;
         padding: 1em;
-
     }
     .left{
         width: 100%;
@@ -193,7 +193,123 @@ button {
     .right{
         width: 100%;
         border: none;
+        padding: 5px;   
+    }
+    .welcomeScreen {
+        flex-direction: column;
+    }
+    .welcomeScreen .content {
+        width: 100%;
+    }
+    .welcomeScreen .content button{
+        display: none;
+    }
+    .welcomeScreen .image {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .welcomeScreen .image button{
+        display: block!important;
+    }
+    .animationttb{
+        animation: toptoBottom 0.5s ease-in-out forwards;
+    }
+
+    @keyframes toptoBottom {
+        0% {
+            transform: translateX(150%);
+        }
+        
+        100% {
+            transform: translateY(0%);
+        }
+    }   
+    .animationltr{
+        animation: lefttoright 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes lefttoright {
+        0% {
+            transform: translateX(-150%);
+        }
+        
+        100% {
+            transform: translateX(0%);
+        }
+    }   
+    
+
+}
+@media screen and (max-width: 425px) {
+    body{
+        max-width: 425px;
+    }
+    .container {
+        display: flex;
+        flex-direction: column!important;
+        width: 90%;
+        height: 90%;
+        padding: 1em;
+
+    }
+    .left{
+        width: 100%;
+        border: none;
         padding: 5px;
+        z-index: 99;
+        overflow: hidden;
+    }
+
+    .right{
+        width: 100%;
+        border: none;
+        padding: 5px;
+        z-index: -1;
         
     }
+    .welcomeScreen {
+        flex-direction: column;
+    }
+    .welcomeScreen .content {
+        width: 100%;
+    }
+    .welcomeScreen .content button{
+        display: none;
+    }
+    .welcomeScreen .image {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .welcomeScreen .image button{
+        display: block!important;
+        background-color: salmon;
+    }
+    .animationttb{
+        animation: toptoBottom 0.5s ease-in-out forwards;
+    }
+    @keyframes toptoBottom {
+        0% {
+            transform: translateX(150%);
+        }
+        
+        100% {
+            transform: translateX(0%);
+        }
+    }   
+    .animationltr{
+        animation: lefttoright 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes lefttoright {
+        0% {
+            transform: translateX(-150%);
+        }
+        
+        100% {
+            transform: translateX(0%);
+        }
+    }   
+    
 }
